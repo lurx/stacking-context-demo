@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Ubuntu+Mono&display=swap");
+:root {
+  --alpha: 1;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+HTML {
+  --font-size: 16px;
+  font-size: var(--font-size);
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 1024px) {
+  HTML {
+    --font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  HTML {
+    --font-size: 12px;
+  }
+}
+@media (max-width: 700px) {
+  HTML {
+    --font-size:10px;
+  }
+}
+
+P {
+  margin: 0.5rem 0;
+}
+
+BODY, div {
+  border: 0.2rem dashed currentColor;
+  padding: 0.5rem;
+}
+
+BODY {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+A {
+  text-decoration: none;
+  color: hsla(209.6deg, 100%, 55.8823529412%, var(--alpha));
+}
+
+code {
+  background: hsla(0deg, 0%, 20%, var(--alpha));
+  color: hsla(0deg, 0%, 100%, var(--alpha));
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.35;
+  font-family: "Ubuntu Mono", monospace;
+}
+.description code, .help code {
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  flex-direction: row;
+}
+code p {
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.tag {
+  color: orange;
+}
+
+.prop {
+  color: hsla(300deg, 100%, 50%, var(--alpha));
+}
+
+.val {
+  color: hsla(180deg, 100%, 50%, var(--alpha));
+}
+
+.name {
+  font-weight: bold;
+}
+
+.description {
+  display: block;
+  margin-top: 4px;
+}
+
+.properties {
+  display: block;
+  margin-top: 1rem;
+}
+
+.div {
+  margin: 1.5rem 0.25rem;
+  transition: 0.2s opacity ease-in-out;
+  margin-top: 1rem;
+}
+.div1 {
+  border-color: hsla(340.3738317757deg, 59.7765363128%, 64.9019607843%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(340.3738317757deg, 59.7765363128%, 49.9019607843%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(340.3738317757deg, 59.7765363128%, 49.9019607843%, var(--alpha));
+}
+.div1 .description code {
+  border: 1px solid hsla(340.3738317757deg, 59.7765363128%, 49.9019607843%, var(--alpha));
+}
+.div2 {
+  border-color: hsla(149.8823529412deg, 100%, 50%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(149.8823529412deg, 100%, 35%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(149.8823529412deg, 100%, 35%, var(--alpha));
+}
+.div2 .description code {
+  border: 1px solid hsla(149.8823529412deg, 100%, 35%, var(--alpha));
+}
+.div3 {
+  border-color: hsla(218.5401459854deg, 79.1907514451%, 66.0784313725%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(218.5401459854deg, 79.1907514451%, 51.0784313725%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(218.5401459854deg, 79.1907514451%, 51.0784313725%, var(--alpha));
+}
+.div3 .description code {
+  border: 1px solid hsla(218.5401459854deg, 79.1907514451%, 51.0784313725%, var(--alpha));
+}
+.div4 {
+  border-color: hsla(54deg, 76.9230769231%, 74.5098039216%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(54deg, 76.9230769231%, 59.5098039216%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(54deg, 76.9230769231%, 59.5098039216%, var(--alpha));
+}
+.div4 .description code {
+  border: 1px solid hsla(54deg, 76.9230769231%, 59.5098039216%, var(--alpha));
+}
+.div5 {
+  border-color: hsla(300deg, 47.2868217054%, 74.7058823529%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(300deg, 47.2868217054%, 59.7058823529%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(300deg, 47.2868217054%, 59.7058823529%, var(--alpha));
+}
+.div5 .description code {
+  border: 1px solid hsla(300deg, 47.2868217054%, 59.7058823529%, var(--alpha));
+}
+.div6 {
+  border-color: hsla(6.1764705882deg, 93.1506849315%, 71.3725490196%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(6.1764705882deg, 93.1506849315%, 56.3725490196%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(6.1764705882deg, 93.1506849315%, 56.3725490196%, var(--alpha));
+}
+.div6 .description code {
+  border: 1px solid hsla(6.1764705882deg, 93.1506849315%, 56.3725490196%, var(--alpha));
+}
+.div7 {
+  border-color: hsla(146.7226890756deg, 49.7907949791%, 46.862745098%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(146.7226890756deg, 49.7907949791%, 31.862745098%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(146.7226890756deg, 49.7907949791%, 31.862745098%, var(--alpha));
+}
+.div7 .description code {
+  border: 1px solid hsla(146.7226890756deg, 49.7907949791%, 31.862745098%, var(--alpha));
+}
+.div8 {
+  border-color: hsla(32.5423728814deg, 100%, 88.431372549%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(32.5423728814deg, 100%, 73.431372549%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(32.5423728814deg, 100%, 73.431372549%, var(--alpha));
+}
+.div8 .description code {
+  border: 1px solid hsla(32.5423728814deg, 100%, 73.431372549%, var(--alpha));
+}
+.div9 {
+  border-color: hsla(0deg, 0%, 0%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(0deg, 0%, 0%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(0deg, 0%, 0%, var(--alpha));
+}
+.div9 .description code {
+  border: 1px solid hsla(0deg, 0%, 0%, var(--alpha));
+}
+.div10 {
+  border-color: hsla(19.3043478261deg, 56.0975609756%, 40.1960784314%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(19.3043478261deg, 56.0975609756%, 25.1960784314%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(19.3043478261deg, 56.0975609756%, 25.1960784314%, var(--alpha));
+}
+.div10 .description code {
+  border: 1px solid hsla(19.3043478261deg, 56.0975609756%, 25.1960784314%, var(--alpha));
+}
+.div11 {
+  border-color: hsla(207.2727272727deg, 44%, 49.0196078431%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(207.2727272727deg, 44%, 34.0196078431%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(207.2727272727deg, 44%, 34.0196078431%, var(--alpha));
+}
+.div11 .description code {
+  border: 1px solid hsla(207.2727272727deg, 44%, 34.0196078431%, var(--alpha));
+}
+.div12 {
+  border-color: hsla(340.3738317757deg, 59.7765363128%, 64.9019607843%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(340.3738317757deg, 59.7765363128%, 49.9019607843%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(340.3738317757deg, 59.7765363128%, 49.9019607843%, var(--alpha));
+}
+.div12 .description code {
+  border: 1px solid hsla(340.3738317757deg, 59.7765363128%, 49.9019607843%, var(--alpha));
+}
+.div13 {
+  border-color: hsla(55.6097560976deg, 38.3177570093%, 58.0392156863%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(55.6097560976deg, 38.3177570093%, 43.0392156863%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(55.6097560976deg, 38.3177570093%, 43.0392156863%, var(--alpha));
+}
+.div13 .description code {
+  border: 1px solid hsla(55.6097560976deg, 38.3177570093%, 43.0392156863%, var(--alpha));
+}
+.div14 {
+  border-color: hsla(180deg, 100%, 25.0980392157%, var(--alpha));
+  color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  background-color: hsla(180deg, 100%, 10.0980392157%, var(--alpha));
+  box-shadow: 0 0 0 0.3rem hsla(180deg, 100%, 10.0980392157%, var(--alpha));
+}
+.div14 .description code {
+  border: 1px solid hsla(180deg, 100%, 10.0980392157%, var(--alpha));
+}
+.div1 {
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+}
+.div2 {
+  position: absolute;
+  top: 5rem;
+  left: 15rem;
+  z-index: 0;
+}
+.div2 .properties {
+  margin-bottom: 1rem;
+}
+.div3 {
+  position: fixed;
+  height: 35rem;
+  left: 27rem;
+  top: 14rem;
+}
+.div4, .div8 {
+  color: hsla(0deg, 0%, 13.3333333333%, var(--alpha));
+}
+.div4 {
+  display: flex;
+  flex-direction: column;
+}
+.div5 {
+  z-index: 0;
+}
+.div6 {
+  display: grid;
+}
+.div7 {
+  z-index: 0;
+}
+.div8 {
+  opacity: 0.99;
+}
+.div9 {
+  border-color: hsla(240deg, 100%, 98.6274509804%, var(--alpha));
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+.div10 {
+  transform: translate(0);
+}
+.div11 {
+  isolation: isolate;
+}
+.div12 {
+  -webkit-overflow-scrolling: touch;
+}
+.div13 {
+  will-change: opacity;
+}
+.div14 {
+  contain: content;
+}
+.div.fade {
+  --alpha: 0.2;
+}
+.div.nofade {
+  --alpha: 1;
+}
+
+.help {
+  position: fixed;
+  bottom: 2vmax;
+  right: 2vmax;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.help::before, .help::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 0.2rem solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.help::after {
+  animation-delay: 0.75s;
+}
+.help .icon {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 2.5rem;
+}
+.help .popup {
+  border: 2px solid white;
+  background: #333;
+  color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0 0.15rem #fff, 0 0 1rem #333;
+  line-height: 1.5;
+  transform-origin: bottom right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80vw;
+  transform: translate(-3rem, -3rem);
+  display: none;
+}
+.help .popup UL {
+  padding-left: 1rem;
+}
+.help .popup LI {
+  margin-bottom: 1rem;
+}
+.help input[type=checkbox] {
+  display: none;
+}
+.help input[type=checkbox]:checked + .popup {
+  display: block;
+}
+
+@keyframes ripple {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 200%;
+    height: 200%;
+    border-color: transparent;
+  }
+}

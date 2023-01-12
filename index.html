@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Modern Stacking Context</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <p class="name">Body</p>
+    <p class="description">
+      <code class="tag">&lt;HTML&gt;</code> is the Stacking order root, followed
+      by <code class="tag">&lt;body&gt;</code>.
+    </p>
+
+    <div class="div div1">
+      <span class="name">DIV #1</span>
+      <span class="description">Level 1.</span>
+      <code class="properties">
+        <p>
+          <span class="prop">position</span>: <span class="val">static</span>;
+        </p>
+      </code>
+    </div>
+
+    <div class="div div2">
+      <span class="name">DIV #2</span>
+      <span class="description">
+        Element with a <code class="prop">position</code> value
+        <code class="val">absolute</code> or <code class="val">relative</code>,
+        and <code class="prop">z-index</code> value other than
+        <code class="val">auto</code>.<br /><br />
+        This element is <code class="prop">absolute</code> to the
+        <code class="tag">&lt;BODY&gt;</code>
+      </span>
+      <code class="properties">
+        <p>
+          <span class="prop">position</span>: <span class="val">absolue</span>;
+        </p>
+        <p><span class="prop">z-index</span>: <span class="val">0</span>;</p>
+      </code>
+    </div>
+
+    <div class="div div3">
+      <span class="name">DIV #3</span>
+      <span class="description">
+        Element with a <code class="prop">position</code> value
+        <code class="val">fixed</code> or <code class="val">static</code>.
+      </span>
+      <code class="properties">
+        <p>
+          <span class="prop">position</span>: <span class="val">fixed</span>;
+        </p>
+      </code>
+    </div>
+
+    <div class="div div4 flex-container">
+      <span class="name">DIV #4</span>
+      <span class="description">A flex parent.</span>
+      <code class="properties">
+        <span class="prop">display</span>: <span class="val">flex;</span>
+      </code>
+      <div class="div div5 flex-item">
+        <span class="name">DIV #5</span>
+        <span class="description"
+          >Element that is a <span class="bold">child</span> of a
+          <code class="val">flex</code> container, with
+          <code class="prop">z-index</code> value other than
+          <code class="val">auto</code>.</span
+        >
+        <code class="properties">
+          <span class="prop">z-index</span>: <span class="val">0</span>;
+        </code>
+      </div>
+    </div>
+
+    <div class="div div6 grid-container">
+      <span class="name">DIV #6</span>
+      <span class="description">A grid parent.</span>
+      <code class="properties">
+        <span class="prop">display</span>: <span class="val">grid</span>;
+      </code>
+      <div class="div div7 flex-item">
+        <span class="name">DIV #7</span>
+        <span class="description"
+          >Element that is a <span class="bold">child</span> of a
+          <code class="val">flex</code> container, with
+          <code class="prop">z-index</code> value other than
+          <code class="val">auto</code>.</span
+        >
+        <code class="properties">
+          <span class="prop">z-index</span>: <span class="val">0</span>;
+        </code>
+      </div>
+    </div>
+
+    <div class="div div8">
+      <span class="name">DIV #8</span>
+      <span class="description"
+        >Element with an <code class="val">opacity</code> value less than
+        <code class="val">1</code>. (See the
+        <a href="http://www.w3.org/TR/css3-color/#transparency" target="blank"
+          >specification for opacity</a
+        >)</span
+      >
+      <code class="properties">
+        <span class="prop">opacity</span>: <span class="val">0.99</span>;
+      </code>
+    </div>
+
+    <div class="div div9">
+      <span class="name">DIV #9</span>
+      <span class="description"
+        >Element with an <code class="prop">mix-blend-mode</code> value other
+        than <code class="val">normal</code>.
+        <code class="properties">
+          <span class="prop">mix-blend-mode</span>:
+          <span class="val">multiply</span>;
+        </code>
+      </span>
+    </div>
+
+    <div class="div div10">
+      <span class="name">DIV #10</span>
+      <span class="description"
+        >Element with any of the following properties with value other than
+        <code class="val">none</code>:
+        <ul>
+          <li><code class="prop">transform</code></li>
+          <li><code class="prop">filter</code></li>
+          <li><code class="prop">perspective</code></li>
+          <li><code class="prop">clip-path</code></li>
+          <li>
+            <code class="prop">mask</code> /
+            <code class="prop">mask-image</code> /
+            <code class="prop">mask-border</code>
+          </li>
+        </ul>
+        <code class="properties">
+          <span class="prop">transform</span>:
+          <span class="val">translate(0)</span>;
+        </code>
+      </span>
+    </div>
+
+    <div class="div div11">
+      <span class="name">DIV #11</span>
+      <div class="description">
+        Element with a <code class="prop">isolation</code> value
+        <code class="val">isolate</code>.
+      </div>
+      <code class="properties">
+        <span class="prop">isolation</span>: <span class="val">isolate</span>;
+      </code>
+    </div>
+
+    <div class="div div12">
+      <span class="name">DIV #12</span>
+      <span class="description">
+        Element with a
+        <code class="prop">-webkit-overflow-scrolling</code> value
+        <code class="val">touch</code>.
+      </span>
+      <code class="properties">
+        <span class="prop">-webkit-overflow-scrolling</span>:
+        <span class="val">touch</span>;
+      </code>
+    </div>
+
+    <div class="div div13">
+      <span class="name">DIV #13</span>
+      <span class="description">
+        Element with a <code class="prop">will-change</code> value specifying
+        any property that would create a stacking context on non-initial value
+        (see this
+        <a
+          href="https://dev.opera.com/articles/css-will-change-property/"
+          target="_blank"
+          >post</a
+        >).
+      </span>
+      <code class="properties">
+        <span class="prop">will-change</span>: <span class="val">opacity</span>;
+      </code>
+    </div>
+
+    <div class="div div14">
+      <span class="name">DIV #14</span>
+      <span class="description">
+        Element with a <code class="prop">contain</code> value of
+        <code class="val">layout</code>, or <code class="val">paint</code>, or a
+        composite value that includes either of them (i.e.
+        <code
+          ><span class="prop">contain</span>:
+          <span class="val">strict</span></code
+        >,
+        <code
+          ><span class="prop">contain</span>:
+          <span class="val">content</span></code
+        >).
+      </span>
+      <code class="properties">
+        <span class="prop">contain</span>: <span class="val">content</span>;
+      </code>
+    </div>
+
+    <label for="toggle-help" class="help">
+      <span class="icon">?</span>
+      <input type="checkbox" id="toggle-help" />
+      <div class="popup">
+        <ul>
+          <li>
+            The stacking context of elements used to be simple and easy to
+            understand. Over the years, as new properties and values were
+            introduced into CSS, the stacking order became more complex, and
+            seemingly unpredictable, if not understood correctly.
+          </li>
+          <li>
+            This demo shows the stacking context of a single level (<code
+              class="tag"
+              >&lt;BODY&gt;</code
+            >
+            as the stacking context root), and a maximum of one child per
+            element, if needed for the demo purposes. Details from MDN.<br />For
+            more information, read
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context"
+              target="_blank"
+            >
+              The Stacking Context</a
+            >
+          </li>
+          <li>
+            The CSS mentioned in each div is actually applied to it. In case of
+            multiple possibilities, only one is assigned.<br />
+            No <code class="prop">z-index</code> is assigned, unless otherwise
+            mentioned. <br />
+            Other styling rules (colors, sizes etc.) are applied but aren't
+            shown in the output. Explore the code for the full style.
+          </li>
+          <li>
+            Click an element to focus it and fade the others.<br />
+            Moving the cursor outside of the element will remove the effect.
+          </li>
+          <li>Click anywhere to close this modal.</li>
+        </ul>
+      </div>
+    </label>
+  </body>
+</html>
